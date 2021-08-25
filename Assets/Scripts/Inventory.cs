@@ -17,13 +17,14 @@ public class Inventory : MonoBehaviour
         
         if (Input.GetKeyDown(KeyCode.Tab))
         {
-            if ( inventory == false)// Byter mellan att ha menyn öppen och stängd
+            if ( inventory.tag == "Close")// Byter mellan att ha menyn öppen och stängd
             {
                 print("Opening"); //debug
 
                 inventory.SetActive(true);
+                
             }
-            else if ( inventory == true)
+            else if ( inventory.tag == "Open")
             {
                 print("Closing"); //debug
 
