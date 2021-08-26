@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel.Design;
+using System.Security.Cryptography.X509Certificates;
 using UnityEngine;
 
 public class Inventory : MonoBehaviour
@@ -22,6 +23,7 @@ public class Inventory : MonoBehaviour
                 print("Opening"); //debug
 
                 inventory.SetActive(true);
+                inventory.tag = "Open";
                 
             }
             else if ( inventory.tag == "Open")
@@ -29,6 +31,7 @@ public class Inventory : MonoBehaviour
                 print("Closing"); //debug
 
                 inventory.SetActive(false);
+                inventory.tag = "Close";
 
             }
         }
